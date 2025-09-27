@@ -2,7 +2,9 @@ package org.isayan;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.isayan.cards.Deck;
+import org.isayan.actors.Player;
+import org.isayan.game.GameEngine;
+import org.isayan.game.GameState;
 
 
 public class Main {
@@ -10,7 +12,12 @@ public class Main {
     static void main() {
         LOGGER.info("Blackjack!");
 
-        Deck deck = new Deck();
-        LOGGER.info("New deck of {} cards\n{}", deck.size(), deck);
+        int numOfDecks = 6;
+        GameState gameState = new GameState(numOfDecks);
+
+        gameState.seatPlayer(new Player());
+        gameState.seatPlayer(new Player());
+
+        new GameEngine(gameState).playRound();
     }
 }

@@ -1,4 +1,4 @@
-package org.isayan.cards;
+package org.isayan.model;
 
 public enum Suit {
     HEARTS("Hearts"),

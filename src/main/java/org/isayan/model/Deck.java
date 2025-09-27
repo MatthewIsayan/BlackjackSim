@@ -1,30 +1,36 @@
-package org.isayan.cards;
+package org.isayan.model;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.isayan.Main;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.EmptyStackException;
+import java.util.Stack;
 import java.util.stream.Collectors;
 
 public class Deck {
     private static final Logger LOGGER = LogManager.getLogger(Deck.class);
 
-    private final List<Card> cards = new ArrayList<>();
+    private final Stack<Card> cards = new Stack<>();
 
     public Deck() {
-        LOGGER.debug("Initializing deck of cards");
         for (Rank rank : Rank.values()) {
             for (Suit suit : Suit.values()) {
                 cards.add(new Card(rank, suit));
             }
         }
-        LOGGER.debug("Created deck of {} cards", size());
+        LOGGER.debug("Created deck of {} cards", numberOfCards());
     }
 
-    public int size() {
+    public int numberOfCards() {
         return getCards().size();
+    }
+
+    public Card dealTopCard() {
+        try {
+            return cards.pop();
+        } catch (EmptyStackException e) {
+            throw new RuntimeException("Attempted to deal a card from an empty deck.", e);
+        }
     }
 
     @Override
@@ -34,7 +40,7 @@ public class Deck {
                 .collect(Collectors.joining("\n"));
     }
 
-    public List<Card> getCards() {
+    public Stack<Card> getCards() {
         return cards;
     }
 }

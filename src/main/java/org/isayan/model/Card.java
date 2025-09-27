@@ -1,8 +1,9 @@
-package org.isayan.cards;
+package org.isayan.model;
 
 public class Card {
     private final Rank rank;
     private final Suit suit;
+    private boolean faceUp = false;
 
     public Card(Rank rank, Suit suit) {
         this.suit = suit;
@@ -15,6 +16,14 @@ public class Card {
 
     public Suit getSuit() {
         return suit;
+    }
+
+    public boolean isFaceUp() {
+        return faceUp;
+    }
+
+    public void setFaceUp(boolean faceUp) {
+        this.faceUp = faceUp;
     }
 
     @Override

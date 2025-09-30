@@ -1,13 +1,34 @@
 <Configuration status="WARN">
     <Appenders>
-        <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout disableAnsi="false"
-                           pattern="[%d{HH:mm:ss}] %highlight{%-5level} %style{%logger}{cyan}.%M:%L - %msg%n"/>
+        <!-- Player/game output stays on the main console -->
+        <Console name="GameConsole" target="SYSTEM_OUT">
+            <PatternLayout pattern="%msg%n"/>
         </Console>
+
+        <!-- Developer logs written to a file -->
+        <File name="DevLog"
+              fileName="logs/dev.log"
+              append="false">
+            <PatternLayout
+                    pattern="[%d{HH:mm:ss}] %highlight{%-5level}{
+                   TRACE=magenta,
+                   DEBUG=green,
+                   INFO=blue,
+                   WARN=yellow,
+                   ERROR=red,
+                   FATAL=red
+                 } %style{%logger}{cyan}.%M:%L - %msg%n"/>
+        </File>
     </Appenders>
+
     <Loggers>
         <Root level="trace">
-            <AppenderRef ref="Console"/>
+            <AppenderRef ref="DevLog"/>
         </Root>
+
+        <!-- Optional: only if you want some messages also to player console -->
+        <Logger name="org.isayan.console.GameOutput" additivity="false" level="info">
+            <AppenderRef ref="GameConsole"/>
+        </Logger>
     </Loggers>
 </Configuration>

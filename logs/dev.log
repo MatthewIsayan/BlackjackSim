@@ -1,0 +1,23 @@
+[00:25:25] [34mINFO [m [36morg.isayan.console.Main[m.main:14 - Blackjack!
+[00:25:25] [32mDEBUG[m [36morg.isayan.library.model.Deck[m.<init>:20 - Created deck of 52 cards
+[00:25:25] [32mDEBUG[m [36morg.isayan.library.model.Deck[m.<init>:20 - Created deck of 52 cards
+[00:25:25] [32mDEBUG[m [36morg.isayan.library.model.Deck[m.<init>:20 - Created deck of 52 cards
+[00:25:25] [32mDEBUG[m [36morg.isayan.library.model.Deck[m.<init>:20 - Created deck of 52 cards
+[00:25:25] [32mDEBUG[m [36morg.isayan.library.model.Deck[m.<init>:20 - Created deck of 52 cards
+[00:25:25] [32mDEBUG[m [36morg.isayan.library.model.Deck[m.<init>:20 - Created deck of 52 cards
+[00:25:25] [35mTRACE[m [36morg.isayan.library.event.EventBus[m.subscribe:17 - ConsoleEventListener subscribed
+[00:25:25] [35mTRACE[m [36morg.isayan.library.event.EventBus[m.publish:22 - Publishing [IntiateGameEvent]
+[00:25:25] [35mTRACE[m [36morg.isayan.console.ConsoleEventListener[m.listen:18 - Consuming [IntiateGameEvent] 
+[00:25:26] [35mTRACE[m [36morg.isayan.library.event.EventBus[m.publish:22 - Publishing [CardDealtEvent]
+[00:25:26] [35mTRACE[m [36morg.isayan.console.ConsoleEventListener[m.listen:18 - Consuming [CardDealtEvent] 
+[00:25:26] [35mTRACE[m [36morg.isayan.library.event.EventBus[m.publish:22 - Publishing [CardDealtEvent]
+[00:25:26] [35mTRACE[m [36morg.isayan.console.ConsoleEventListener[m.listen:18 - Consuming [CardDealtEvent] 
+[00:25:26] [35mTRACE[m [36morg.isayan.library.event.EventBus[m.publish:22 - Publishing [CardDealtEvent]
+[00:25:26] [35mTRACE[m [36morg.isayan.console.ConsoleEventListener[m.listen:18 - Consuming [CardDealtEvent] 
+[00:25:26] [35mTRACE[m [36morg.isayan.library.event.EventBus[m.publish:22 - Publishing [CardDealtEvent]
+[00:25:26] [35mTRACE[m [36morg.isayan.console.ConsoleEventListener[m.listen:18 - Consuming [CardDealtEvent] 
+[00:25:27] [35mTRACE[m [36morg.isayan.library.event.EventBus[m.publish:22 - Publishing [CardDealtEvent]
+[00:25:27] [35mTRACE[m [36morg.isayan.console.ConsoleEventListener[m.listen:18 - Consuming [CardDealtEvent] 
+[00:25:27] [32mDEBUG[m [36morg.isayan.console.ConsoleEventListener[m.listen:27 - Hidden card is Ten of Clubs
+[00:25:27] [35mTRACE[m [36morg.isayan.library.event.EventBus[m.publish:22 - Publishing [CardDealtEvent]
+[00:25:27] [35mTRACE[m [36morg.isayan.console.ConsoleEventListener[m.listen:18 - Consuming [CardDealtEvent] 

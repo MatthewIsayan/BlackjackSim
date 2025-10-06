@@ -17,7 +17,7 @@ public class ConsoleEventListener implements EventListener {
     public void listen(Event event) {
         DEV_LOGGER.trace("Consuming [{}] ", event.getClass().getSimpleName());
         try {
-            Thread.sleep(250);
+            Thread.sleep(250); // todo remove this crap
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

@@ -14,5 +14,18 @@ The project serves as both a **learning tool** and a **simulation framework**:
 
 ---
 
+## 🧱 Current Development
+
+I’m currently working on the **console implementation** of the game — focusing on interactive gameplay, clean event-driven output, and colorized log formatting using Log4j2.  
+This phase aims to create a more dynamic and intuitive play experience directly in the terminal before extending to additional interfaces (e.g., simulation dashboards or graphical UIs).
+
+---
+
+## ▶️ Running the Application
+
+You can launch the console simulation directly from the main entry point:
+
+[src/main/java/org/isayan/console/Main.java](src/main/java/org/isayan/console/Main.java)
+
 📘 **[Setup & DevTools Guide →](./docs/SETUP.md)**  
 Learn how to configure your Java 25 environment and use the PowerShell DevTools module for automated testing and coverage reports.
